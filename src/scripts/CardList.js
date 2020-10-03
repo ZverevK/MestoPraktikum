@@ -1,4 +1,4 @@
-class CardList {
+export default class CardList {
     constructor (container) {
         this.container = container;
     }
@@ -8,7 +8,6 @@ class CardList {
     }
 
     render (card) {
-        console.log(card);
         this.addCard(card);
     }
 }

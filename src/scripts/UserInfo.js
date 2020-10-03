@@ -1,4 +1,4 @@
-class UserInfo {
+export default class UserInfo {
     constructor (nameContainer, aboutContainer) {
         this.nameContainer = nameContainer;
         this.aboutContainer = aboutContainer;

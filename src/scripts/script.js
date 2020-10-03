@@ -1,3 +1,12 @@
+import Api from './Api.js'
+import Card from './Card.js'
+import CardList from './CardList'
+import FormValidator from './FormValidator.js'
+import Popup from './Popup.js'
+import UserInfo from './UserInfo.js'
+import '../pages/index.css'
+
+const URL = process.env.NODE_ENV === 'production' ? 'https://nomoreparties.co' : 'http://nomoreparties.co';
 
 ( function () {
 const userCardPopupOnBtn = document.querySelector('.user-info__add-button');
@@ -31,12 +40,12 @@ addFormValidator.setEventListeners();
 const userFormValidator = new FormValidator (editForm);
 userFormValidator.setEventListeners();
 const userInfo = new UserInfo (userInfoName, userInfoAbout);
-const userInfoApi = new Api ({url: "https://nomoreparties.co/cohort12/users/me", headers: {
+const userInfoApi = new Api ({url: `${URL}/cohort12/users/me`, headers: {
     authorization: "b3ec17e0-d80d-4f49-8739-48095f51ad24",
     'Content-type': 'application/json'
 }})
 
-const cardsApi = new Api ({url: "https://nomoreparties.co/cohort12/cards", headers: {
+const cardsApi = new Api ({url: `${URL}/cohort12/cards`, headers: {
     authorization: "b3ec17e0-d80d-4f49-8739-48095f51ad24"
 }})
 
