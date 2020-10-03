@@ -1,6 +1,5 @@
 {
   "name": "mestopraktikum",
-  "homepage": "https://github.com/ZverevK/MestoPraktikum",
   "version": "1.0.0",
   "description": "webpack practice",
   "main": "script.js",
